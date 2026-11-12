@@ -1,0 +1,10 @@
+{
+  "description": "Pantau suhu udara, kelembapan tanah, dan curah hujan untuk mengelola penyiraman otomatis tanaman secara lebih tepat dan efisien.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

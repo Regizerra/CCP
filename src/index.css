@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "DM Sans", sans-serif;
+    background: #f4f6f2;
+  }
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .nav-item {
+    @apply flex items-center gap-3 rounded-xl px-3 py-3 text-[13px] font-semibold text-[#6f7b73] transition-colors hover:bg-[#f0f3ef] hover:text-[#2f5f48];
+  }
+  .nav-item.active {
+    @apply bg-[#e7f0e9] text-[#2d694d];
+  }
+  .sensor-card {
+    @apply flex min-h-[154px] items-start gap-4 rounded-2xl border border-[#e0e6df] bg-white p-5 shadow-[0_3px_15px_rgba(34,60,44,.025)];
+  }
+  .icon-box {
+    @apply grid size-11 shrink-0 place-items-center rounded-xl;
+  }
+  .icon-box.amber {
+    @apply bg-[#fff3df] text-[#c47b24];
+  }
+  .icon-box.blue {
+    @apply bg-[#e6f2f2] text-[#3c7c80];
+  }
+  .icon-box.indigo {
+    @apply bg-[#ececf7] text-[#6669a2];
+  }
+  .status-pill {
+    @apply flex shrink-0 items-center gap-1.5 rounded-full bg-[#edf5ef] px-2 py-1 text-[9px] font-bold text-[#47785d];
+  }
+  .panel {
+    @apply rounded-2xl border border-[#e0e6df] bg-white p-5 shadow-[0_3px_15px_rgba(34,60,44,.025)] md:p-6;
+  }
+  .panel-title {
+    @apply text-sm font-bold tracking-[-0.01em];
+  }
+  .panel-subtitle {
+    @apply mt-1 text-[10px] text-[#8c978f];
+  }
+  .activity {
+    @apply flex items-center gap-3 text-xs;
+  }
+  .activity p {
+    @apply font-bold;
+  }
+  .activity div span {
+    @apply mt-1 block text-[10px] text-[#929c95];
+  }
+  .activity b {
+    @apply ml-auto text-[10px] font-bold text-[#68756d];
+  }
+  .activity-dot {
+    @apply grid size-7 shrink-0 place-items-center rounded-full;
+  }
+  .activity-dot.green {
+    @apply bg-[#e6f2ea] text-[#397455];
+  }
+  .activity-dot.blue {
+    @apply bg-[#e6f0f4] text-[#49798c];
+  }
+  .activity-dot.amber {
+    @apply bg-[#fbefdd] text-[#ad7025];
+  }
+  .leaflet-container {
+    font-family: "DM Sans", sans-serif;
+    background: #dfe9dc;
+  }
+  .leaflet-control-attribution {
+    font-size: 9px !important;
+  }
+  .leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(28, 51, 38, 0.16);
+  }
+  .leaflet-popup-content {
+    margin: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sensor-card {
+    padding: 1rem;
+    min-height: 140px;
+  }
+  .status-pill {
+    display: none;
+  }
+}
